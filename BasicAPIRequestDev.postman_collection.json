@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "69b3a6e8-6ff9-4eb6-b5be-9849f5317dfe",
+		"name": "BasicAPIRequestDev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11346496",
+		"_collection_link": "https://tester-9394.postman.co/workspace/SA7019APITest~87d9d6b3-e389-4d71-8aad-cd9e15b33405/collection/11346496-69b3a6e8-6ff9-4eb6-b5be-9849f5317dfe?action=share&source=collection_link&creator=11346496"
+	},
+	"item": [
+		{
+			"name": "Single Object",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//how to print any statement\r",
+							"console.log(\"Hello All, Welcome to learn Basics for Js\")\r",
+							"\r",
+							"//how to declare variables in Js\r",
+							"let id=101;\r",
+							"\r",
+							"let fname=\"Jay\";\r",
+							"\r",
+							"let marks=78.77;\r",
+							"\r",
+							"console.log(\"Id is: \"+id);\r",
+							"console.log(\"Name is: \"+fname);\r",
+							"console.log(\"Marks are: \"+marks);\r",
+							"\r",
+							"/*\r",
+							"Javascript support two types of function\r",
+							"1.Function declaration\r",
+							"2.Function Expression\r",
+							"    2.1 Anonymous Function\r",
+							"    2.2 Arrow function\r",
+							"*/\r",
+							"\r",
+							"function show()\r",
+							"{\r",
+							"    console.log(\"This is function declaration....\")\r",
+							"}\r",
+							"\r",
+							"//call\r",
+							"show();\r",
+							"\r",
+							"//Anonymous function(function without name)\r",
+							"\r",
+							"let info=function()\r",
+							"{\r",
+							"console.log(\"This is Anonymous function.....\")\r",
+							"}\r",
+							"\r",
+							"//call\r",
+							"info();\r",
+							"\r",
+							"let sum=function(a,b)//parameterized function\r",
+							"{\r",
+							"console.log(\"Addition is: \"+(a+b));\r",
+							"}\r",
+							"\r",
+							"\r",
+							"sum(100,2000);\r",
+							"\r",
+							"\r",
+							"//arraow\r",
+							"\r",
+							"let test2=()=>{\r",
+							"                console.log(\"This is arrow function calling....\");\r",
+							"               }\r",
+							"\r",
+							"test2();\r",
+							"\r",
+							"\r",
+							"let test3=(a,b,c)=>{\r",
+							"console.log(a*b*c);\r",
+							"}\r",
+							"\r",
+							"\r",
+							"test3(10,20,30);\r",
+							"\r",
+							"let test4=(a,b,c)=>console.log(a+b+c);\r",
+							"\r",
+							"test4(1,2,3);\r",
+							"\r",
+							"\r",
+							"//Postman support two style of scripting \r",
+							"//1.BDD style\r",
+							"//2.using chai assertion library\r",
+							"\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//test case with chai assertion library\r",
+							"\r",
+							"pm.test(\"test for status code 200\",()=>{\r",
+							"    pm.expect(pm.response.code).to.eq(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Test for status message OK\",()=>{\r",
+							"    pm.expect(pm.response.status).to.eql(\"OK\");\r",
+							"})\r",
+							"\r",
+							"//To validate server response \r",
+							"/*\r",
+							"First get the response from server and store it into variable\r",
+							"then using variable tets it\r",
+							"\r",
+							"To get response from server\r",
+							"pm.response.json()\r",
+							"*/\r",
+							"\r",
+							"let res=pm.response.json();\r",
+							"console.log(res);\r",
+							"\r",
+							"\r",
+							"pm.test(\"test for id should be 7\",()=>{\r",
+							"    pm.expect(res.id).to.eql(\"7\");\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Test for name property\",()=>{\r",
+							"    pm.expect(res.name).to.eql(\"Apple MacBook Pro 16\")\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Test for year\",()=>{\r",
+							"    pm.expect(res.data.year).to.eql(2019)\r",
+							"})\r",
+							"\r",
+							"//\"CPU model\": \"Intel Core i9\"\r",
+							"pm.test(\"test for cpu model\",()=>{\r",
+							"    pm.expect(res.data[\"CPU model\"]).to.eql(\"Intel Core i9\")\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Tets for Key and value pair\",()=>{\r",
+							"    pm.expect(res).to.have.property(\"name\",\"Apple MacBook Pro 16\")\r",
+							"    pm.expect(res.data).to.have.property(\"CPU model\",\"Intel Core i9\")\r",
+							"})\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.restful-api.dev/objects/7",
+					"protocol": "https",
+					"host": [
+						"api",
+						"restful-api",
+						"dev"
+					],
+					"path": [
+						"objects",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Object",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test for status code 200\",()=>{\r",
+							"    pm.expect(pm.response.code).to.eql(200)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Test for responcse message OK\",()=>{\r",
+							"    pm.expect(pm.response.status).to.eql(\"OK\");\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Apple MacBook Pro 16\",\r\n   \"data\": {\r\n      \"year\": 2025,\r\n      \"price\": 1849.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"2 TB\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.restful-api.dev/objects",
+					"protocol": "https",
+					"host": [
+						"api",
+						"restful-api",
+						"dev"
+					],
+					"path": [
+						"objects"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

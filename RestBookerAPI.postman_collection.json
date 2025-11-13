@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "a5df925d-9e0d-403f-99b5-aaa497c77746",
+		"name": "RestBookerAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11346496",
+		"_collection_link": "https://tester-9394.postman.co/workspace/SA7019APITest~87d9d6b3-e389-4d71-8aad-cd9e15b33405/collection/11346496-a5df925d-9e0d-403f-99b5-aaa497c77746?action=share&source=collection_link&creator=11346496"
+	},
+	"item": [
+		{
+			"name": "GetAllIds",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewBooking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Test for status code 200\",()=>{\r",
+							"    pm.expect(pm.response.code).to.eql(200)\r",
+							"})\r",
+							"\r",
+							"//save the response \r",
+							"let res=pm.response.json();\r",
+							"\r",
+							"pm.test(\"Test for first name\",()=>{\r",
+							"    pm.expect(res.booking.firstname).to.eql(\"Priyanka\") \r",
+							"})\r",
+							"\r",
+							"let id=res.bookingid;\r",
+							"console.log(id)\r",
+							"\r",
+							"//save this id into env\r",
+							"pm.environment.set(\"bookingid\",id)"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"Priyanka\",\r\n    \"lastname\" : \"Nigade\",\r\n    \"totalprice\" : 999,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2025-11-13\",\r\n        \"checkout\" : \"2025-11-14\"\r\n    },\r\n    \"additionalneeds\" : \"Lunch\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookingDetails",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

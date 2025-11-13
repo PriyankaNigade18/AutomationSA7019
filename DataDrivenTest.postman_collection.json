@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "df92f26f-4eda-46db-92bf-521fb37029d4",
+		"name": "DataDrivenTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11346496",
+		"_collection_link": "https://tester-9394.postman.co/workspace/SA7019APITest~87d9d6b3-e389-4d71-8aad-cd9e15b33405/collection/11346496-df92f26f-4eda-46db-92bf-521fb37029d4?action=share&source=collection_link&creator=11346496"
+	},
+	"item": [
+		{
+			"name": "Create Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "reqres-free-v1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{username}}\",\r\n    \"job\": \"{{userjob}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
