@@ -69,7 +69,20 @@ public class AuthorizationTypes {
   }
   
   
-  
+  @Test
+  public void testOAuth2()
+  {
+	  String githubToken="1234";
+	  
+	  Response res=given()
+			  	.auth().oauth2(githubToken)
+	  
+			  	.when().get("https://api.github.com/user/repos");
+	  
+	  res.then().log().body();
+	  
+	  
+  }
   
   
   
