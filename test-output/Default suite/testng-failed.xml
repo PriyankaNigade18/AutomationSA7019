@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.MobileTest.DriverSessions.DriverSessionUsingUiautomator2OptionsClass">
+      <class name="com.MobileAppTest.Scenarios.Tc_6_DragAndDrop">
         <methods>
-          <include name="testDriverSession"/>
+          <include name="testDragAndDrop"/>
         </methods>
-      </class> <!-- com.MobileTest.DriverSessions.DriverSessionUsingUiautomator2OptionsClass -->
+      </class> <!-- com.MobileAppTest.Scenarios.Tc_6_DragAndDrop -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
