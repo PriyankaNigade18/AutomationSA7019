@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.MobileAppTest.Scenarios.Tc_6_DragAndDrop">
+      <class name="com.MobileAppTest.Scenarios.Tc_14_PerformanceParameters">
         <methods>
-          <include name="testDragAndDrop"/>
+          <include name="testPerformanceParameter"/>
         </methods>
-      </class> <!-- com.MobileAppTest.Scenarios.Tc_6_DragAndDrop -->
+      </class> <!-- com.MobileAppTest.Scenarios.Tc_14_PerformanceParameters -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
