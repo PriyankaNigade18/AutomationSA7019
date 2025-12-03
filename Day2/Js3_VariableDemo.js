@@ -161,6 +161,9 @@ const pi=3.14;
 //pi=8.67;TypeError: Assignment to constant variable.
 //const pi=3.14;
 
+//Cannot redeclare block-scoped variable 'book'
+// let book="Java";
+// const book="Selenium";
 
 
 

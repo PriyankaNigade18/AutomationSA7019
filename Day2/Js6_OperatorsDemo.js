@@ -73,6 +73,137 @@ let y=--x;
 console.log(x);//677
 console.log(y);//677
 
+console.log("---------Interview Questions--------");
+
+console.log(90/0);//Infinity
+console.log(-90/0);//-Infinity
+console.log("Hello"/0);//Nan (Not a number)
+console.log(undefined/8);//NaN
+console.log(0/0);//Nan
+
+console.log("----Relational Operators------");
+/*
+< ,<=, >, >=   (loose equality) == & ===(strict Eqauality) !=(not equal to)
+
+Test Data
+---------------
+i=j=91 u=57 v=56 r=190  s=189 x=y=677
+*/
+
+console.log("< less than: "+(v<r));//true
+console.log(x<r);//false
+console.log("<= less than equal to: "+(x<=y));//true
+console.log(i<=v);//false
+console.log("> greater than : "+(i>u));//true
+console.log(" >= greater than equal to: "+(s>=j));//true
+console.log(v>=s);//false
+
+console.log(x==y);
+console.log(x===y);
+
+/*
+
+loose equality ==
+--------------------
+will convert the type and then compare values
+It always follow type coercion(type casting)
+
+strict equality ===
+-------------------------
+Here no coversion and original values tested..
+
+*/
+
+console.log(5=='5');//true '5'coerced into 5
+console.log(undefined==null);//true
+
+//correct result
+console.log(5==='5');//false
+
+console.log(undefined===null);//false
+
+console.log(x!=y);//false
+
+console.log("-----Logical opertaors------");
+/*
+    c1      c2         &&(AND)      ||(OR)    !(NOT)
+    ----------------------------------------------
+    true    true        true        true
+    true    false       false       true
+    false   true        false       true    
+    false   false       false       false
+
+Test Data
+---------------
+i=j=91 u=57 v=56 r=190  s=189 x=y=677
+
+*/
+
+console.log("----&&-------");
+
+console.log(x===y && v<r);//true
+console.log(x===y && v>=s);//false
+console.log(v===s && v<s);//false
+console.log(v===s && x>y);//false
+
+console.log("----||-------");
+
+console.log(x===y || v<r);//true
+console.log(x===y || v>=s);//true
+console.log(v===s || v<s);//true
+console.log(v===s || x>y);//false
+
+console.log("----!(Not)-----");
+
+console.log(i===j);//true
+
+console.log(!(i===j));//false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
