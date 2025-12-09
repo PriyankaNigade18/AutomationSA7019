@@ -13,7 +13,7 @@ Method belongs to class
     2.2. Arrow function
 */
 
-console.log("------Function Declaration-----");
+console.log("------Function Declaration without parameter-----");
 
 function test1()
 {
@@ -33,6 +33,7 @@ function add(num1,num2)
     
 }
 
+//call
 add(100,200);
 
 console.log("------Function Declaration with parameters using return statament-----");
@@ -47,6 +48,7 @@ function sum(num1,num2)
     return num1+num2;
 }
 
+//call
 let result=sum(10,20);
 console.log("Sum is: "+result);
 
