@@ -49,6 +49,7 @@ describe("Test for Cypress Variables",()=>{
 it("Test for Title and url with variable",()=>{
 
 cy.visit("https://www.google.com/");
+cy.screenshot("GooglePage.png");
 
 //title()
 // let appTitle=cy.title();
@@ -79,6 +80,25 @@ cy.get("#APjFqb").then(($searchEle)=>{  //here $searchEle is varibale name
 })
 
     
+})
+
+
+
+it.only("Test for single element",()=>{
+    cy.visit("https://tutorialsninja.com/demo/index.php?route=account/register");
+
+    //cy.get("#input-firstname").type("Jay");
+
+    //variable
+    cy.get("#input-firstname").then(($fname)=>{
+
+
+        //click
+        cy.wrap($fname).click().type("Jay");
+    })
+
+
+
 })
 
 
