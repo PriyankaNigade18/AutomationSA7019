@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAPITest.Tc3_TestBDDPattern">
+      <class name="com.RestAPITest.TelecomeProject">
         <methods>
-          <include name="testSingleUser"/>
+          <include name="AddNewUser"/>
         </methods>
-      </class> <!-- com.RestAPITest.Tc3_TestBDDPattern -->
+      </class> <!-- com.RestAPITest.TelecomeProject -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
